@@ -6,11 +6,11 @@ public class FrelanceCalc {
         int counter = 0;
         for (int i = 1; i <= 12; i++) {
             if (money < threshold) {
-                System.out.println("Месяц " + i + ". Денег " + money + "." + " Придётся работать." + " Заработал +" + income + ", потратил " + expenses);
+                System.out.println("Месяц " + i + ". Денег " + money + "." + " Придётся работать." + " Заработал +" + income + ", потратил -" + expenses);
                 money += income - expenses;
 
             } else {
-                System.out.println("Месяц " + i + ". Денег " + money + "." + " Буду отдыхать." + " Потратил " + expenses + ", затем ещё -" + ((money - expenses) - ((money - expenses) / 3)));
+                System.out.println("Месяц " + i + ". Денег " + money + "." + " Буду отдыхать." + " Потратил -" + expenses + ", затем ещё -" + ((money - expenses) - ((money - expenses) / 3)));
                 money = money - expenses;
                 money = money / 3;
                 counter += 1;
